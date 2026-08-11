@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Faculty Dashboard — ACCA Knowledge Level LMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{--navy:#0f2544;--blue:#1c5cae;--gold:#d6a44a;--green:#1f8a5f;--purple:#6b3fa0;--orange:#c9701e;--bg:#f4f6fa;}
+  *{box-sizing:border-box;}
+  body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:var(--bg);color:#1a2233;}
+  header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:30px 24px;}
+  header h1{margin:0 0 6px;font-size:1.6rem;}
+  nav{background:#fff;border-bottom:1px solid #dfe3ea;display:flex;gap:4px;padding:0 24px;flex-wrap:wrap;position:sticky;top:0;z-index:10;}
+  nav a{padding:14px 16px;text-decoration:none;color:var(--navy);font-weight:600;font-size:.92rem;border-bottom:3px solid transparent;}
+  nav a.active{border-bottom:3px solid var(--gold);color:var(--blue);}
+  main{max-width:1080px;margin:0 auto;padding:28px 24px 60px;}
+  .card{background:#fff;border-radius:10px;padding:22px 24px;margin-bottom:22px;box-shadow:0 1px 4px rgba(15,37,68,.08);}
+  h2{color:var(--navy);border-left:5px solid var(--gold);padding-left:12px;font-size:1.3rem;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.88rem;}
+  th,td{border:1px solid #e2e6ee;padding:9px 10px;text-align:left;vertical-align:top;}
+  th{background:var(--navy);color:#fff;}
+  tr:nth-child(even){background:#f8f9fc;}
+  .pill{display:inline-block;font-size:.75rem;font-weight:700;padding:2px 9px;border-radius:20px;background:var(--navy);color:#fff;}
+</style>
+</head>
+<body>
+<header>
+  <h1>Faculty Dashboard — Dr. Shallu (ACCA Applied Knowledge)</h1>
+  <p style="opacity:.9;margin:0;">Rubrics, answer bank oversight, exemption processing guide, and readiness sign-off tracker for BT, MA and FA subject faculty.</p>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="calendar.html">Weekly Calendar</a>
+  <a href="papers.html">Papers &amp; Resources</a>
+  <a href="mock.html">Practice &amp; Mock Tests</a>
+  <a href="faculty.html" class="active">Faculty Dashboard</a>
+  <a href="users.html">My Dashboard</a>
+  <a href="resource-guide.html">Resource &amp; Exemption Guide</a>
+</nav>
+<main>
+
+  <div class="card">
+    <h2>Subject Faculty Assignment</h2>
+    <table>
+      <tr><th>Paper</th><th>Subject Faculty</th><th>Weekly Contact Hours</th><th>Sign-off Authority for Real Exam Booking</th></tr>
+      <tr><td>BT — Business &amp; Technology</td><td>To be assigned by Dr. Shallu</td><td>Min. 2 hrs/week</td><td>Subject faculty + Dr. Shallu final approval</td></tr>
+      <tr><td>MA — Management Accounting</td><td>To be assigned by Dr. Shallu</td><td>Min. 2 hrs/week</td><td>Subject faculty + Dr. Shallu final approval</td></tr>
+      <tr><td>FA — Financial Accounting</td><td>To be assigned by Dr. Shallu</td><td>Min. 2 hrs/week</td><td>Subject faculty + Dr. Shallu final approval</td></tr>
+    </table>
+    <p style="font-size:.85rem;color:#5a6472;">Readiness for real ACCA CBE booking: recommended after 2 consecutive Full-Length CBE-Replica Mock attempts scoring ≥60%.</p>
+  </div>
+
+  <div class="card">
+    <h2>Practice Test &amp; Mock Answer Bank</h2>
+    <p>All topic practice test and mock question answer keys, with full wrong-answer explanations, are embedded directly in <b>mock.html</b> (auto-scored, no manual grading needed). Current bank size:</p>
+    <table>
+      <tr><th>Paper</th><th>Topics Covered</th><th>Questions in Bank</th><th>Full-Length Mock Draw Size</th></tr>
+      <tr><td>BT</td><td>5 topics (Sections A–F)</td><td>50</td><td>30 random questions / attempt</td></tr>
+      <tr><td>MA</td><td>5 topics (Sections A–E)</td><td>51</td><td>30 random questions / attempt</td></tr>
+      <tr><td>FA</td><td>5 topics (Sections A–G)</td><td>36</td><td>30 random questions / attempt (or all available if fewer)</td></tr>
+    </table>
+    <p style="font-size:.85rem;color:#5a6472;"><b>Action for Dr. Shallu / subject faculty:</b> Review and expand the question bank over time — especially FA, which has the largest real syllabus weight. New questions can be added directly into the QUESTION_BANK array in mock.html.</p>
+  </div>
+
+  <div class="card">
+    <h2>Exemption Processing Guide (Track 2 Students)</h2>
+    <table>
+      <tr><th>Step</th><th>Action</th></tr>
+      <tr><td>1</td><td>Collect the student's prior qualification documents (BCom Hons transcript, any existing ACCA registration/exemption letters).</td></tr>
+      <tr><td>2</td><td>Direct student to the ACCA Global <a href="https://www.accaglobal.com/uk/en/help/exemptions-calculator.html" target="_blank">Exemptions Calculator</a> to get an indicative entitlement.</td></tr>
+      <tr><td>3</td><td>Confirm final exemption award only comes from ACCA Global directly upon official registration — this LMS calculator result is indicative only.</td></tr>
+      <tr><td>4</td><td>For exempted papers, mark the student's dashboard status as "Exempt" and grant access to Applied Skills readiness materials (once built) instead of repeating Knowledge content.</td></tr>
+      <tr><td>5</td><td>Exempt students who want a refresher may still opt into the Knowledge track voluntarily — track separately as "Refresher, not required for progression."</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Weekly Faculty Checklist (Per Paper)</h2>
+    <table>
+      <tr><th>Day</th><th>Faculty Action</th></tr>
+      <tr><td>Mon</td><td>Confirm week's topic resources (papers.html) are current; flag broken links to Dr. Shallu.</td></tr>
+      <tr><td>Wed</td><td>Optional live doubt-clearing session on that week's topic.</td></tr>
+      <tr><td>Fri</td><td>Remind students to complete the week's Topic Practice Test before Saturday's mock.</td></tr>
+      <tr><td>Sat</td><td>Weekly Mock opens (self-service on mock.html) — review aggregate class scores if tracking manually.</td></tr>
+      <tr><td>Ongoing</td><td>Monitor Full-Length CBE-Replica Mock attempts once all topics for a paper are complete; sign off readiness for real exam booking.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Resource Sourcing Status</h2>
+    <p>All current resources are open/free: <b>ACCA Global India study hub</b> (official syllabus, study guides, technical articles, specimen exams) and <b>OpenTuition</b> (free notes, lectures, practice questions) for BT, MA and FA. Institutional resource licensing (e.g., Kaplan, BPP, LSBF) is planned as a future upgrade — flag to Dr. Shallu when budget is approved so premium content can be layered into papers.html.</p>
+  </div>
+
+</main>
+</body>
+</html>

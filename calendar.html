@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weekly Calendar — ACCA Knowledge Level LMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{--navy:#0f2544;--blue:#1c5cae;--gold:#d6a44a;--green:#1f8a5f;--purple:#6b3fa0;--orange:#c9701e;--bg:#f4f6fa;}
+  *{box-sizing:border-box;}
+  body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:var(--bg);color:#1a2233;}
+  header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:30px 24px;}
+  header h1{margin:0 0 6px;font-size:1.6rem;}
+  nav{background:#fff;border-bottom:1px solid #dfe3ea;display:flex;gap:4px;padding:0 24px;flex-wrap:wrap;position:sticky;top:0;z-index:10;}
+  nav a{padding:14px 16px;text-decoration:none;color:var(--navy);font-weight:600;font-size:.92rem;border-bottom:3px solid transparent;}
+  nav a.active{border-bottom:3px solid var(--gold);color:var(--blue);}
+  main{max-width:1180px;margin:0 auto;padding:28px 24px 60px;}
+  .card{background:#fff;border-radius:10px;padding:22px 24px;margin-bottom:22px;box-shadow:0 1px 4px rgba(15,37,68,.08);}
+  h2{color:var(--navy);border-left:5px solid var(--gold);padding-left:12px;font-size:1.3rem;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.86rem;}
+  th,td{border:1px solid #e2e6ee;padding:9px 10px;text-align:left;vertical-align:top;}
+  th{background:var(--navy);color:#fff;position:sticky;top:57px;}
+  tr:nth-child(even){background:#f8f9fc;}
+  .bt{color:var(--purple);font-weight:700;}
+  .ma{color:var(--green);font-weight:700;}
+  .fa{color:var(--orange);font-weight:700;}
+  .note{background:#fff4e0;border:1px solid #e8c98a;border-radius:8px;padding:14px 18px;margin-top:14px;font-size:.9rem;}
+  .legend{display:flex;gap:18px;margin:10px 0;flex-wrap:wrap;font-size:.85rem;}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .dot{width:12px;height:12px;border-radius:50%;display:inline-block;}
+</style>
+</head>
+<body>
+<header>
+  <h1>📅 Weekly Calendar — ACCA Applied Knowledge Level</h1>
+  <p style="opacity:.9;margin:0;">BT · MA · FA run in parallel — 3 different subject faculty, minimum 2 hrs/week per paper (6 hrs/week combined). Faculty In-Charge: Dr. Shallu.</p>
+</header>
+<nav>
+  <a href="index.html">🏠 Home</a>
+  <a href="calendar.html" class="active">📅 Weekly Calendar</a>
+  <a href="papers.html">📘 Papers &amp; Resources</a>
+  <a href="mock.html">📝 Practice &amp; Mock Tests</a>
+  <a href="faculty.html">👩‍🏫 Faculty Dashboard</a>
+  <a href="users.html">👤 My Dashboard</a>
+  <a href="resource-guide.html">🧭 Resource &amp; Exemption Guide</a>
+</nav>
+<main>
+
+  <div class="card">
+    <h2>How the Parallel-Track Calendar Works</h2>
+    <p>Each paper has its own faculty and moves at its own pace, but all three share the same weekly rhythm: <b>study the topic → attempt the Topic Practice Test (instant scoring + wrong-answer explanations) → sit that paper's Weekly Mock on Saturday.</b> Once every topic in a paper is covered, students move into unlimited-attempt Full-Length CBE-Replica mocks pulled randomly from the question bank, until ready to book the real ACCA exam.</p>
+    <div class="legend">
+      <span><span class="dot" style="background:#6b3fa0;"></span> BT — Business &amp; Technology</span>
+      <span><span class="dot" style="background:#1f8a5f;"></span> MA — Management Accounting</span>
+      <span><span class="dot" style="background:#c9701e;"></span> FA — Financial Accounting</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>10-Week Core Teaching Calendar</h2>
+    <table>
+      <tr><th style="width:4%;">Wk</th><th style="width:8%;">Dates*</th><th class="bt" style="width:22%;">BT Topic</th><th class="ma" style="width:22%;">MA Topic</th><th class="fa" style="width:22%;">FA Topic</th><th style="width:12%;">Sat Weekly Mock</th><th style="width:10%;">Hrs</th></tr>
+      <tr><td>1</td><td>Wk1</td><td class="bt">A. Business Organisation, Structure &amp; External Environment</td><td class="ma">A. Nature, Source &amp; Purpose of Management Information</td><td class="fa">A+B. Context &amp; Purpose of Financial Reporting + Qualitative Characteristics</td><td>BT-M1 · MA-M1 · FA-M1</td><td>6h</td></tr>
+      <tr><td>2</td><td>Wk2</td><td class="bt">B. Stakeholders, Governance &amp; Sustainability</td><td class="ma">B. Cost Accounting Techniques I — Absorption &amp; Marginal Costing</td><td class="fa">C. The Double-Entry Bookkeeping System</td><td>BT-M2 · MA-M2 · FA-M2</td><td>6h</td></tr>
+      <tr><td>3</td><td>Wk3</td><td class="bt">C. Business Functions, Accounting &amp; Internal Control Systems</td><td class="ma">B cont. Cost Accounting Techniques II — Activity-Based &amp; Process Costing</td><td class="fa">D. Recording Transactions I — Sales Tax, Inventory (FIFO/AVCO), Non-Current Assets</td><td>BT-M3 · MA-M3 · FA-M3</td><td>6h</td></tr>
+      <tr><td>4</td><td>Wk4</td><td class="bt">D. Technology &amp; Information Systems in Business</td><td class="ma">C. Budgeting &amp; Budgetary Control</td><td class="fa">D cont. Recording Transactions II — Accruals, Prepayments, Irrecoverable Debts, Provisions</td><td>BT-M4 · MA-M4 · FA-M4</td><td>6h</td></tr>
+      <tr><td>5</td><td>Wk5</td><td class="bt">E. Leadership, Management &amp; Team Motivation</td><td class="ma">D. Standard Costing &amp; Variance Analysis</td><td class="fa">E. Control Accounts, Reconciliations &amp; Correction of Errors</td><td>BT-M5 · MA-M5 · FA-M5</td><td>6h</td></tr>
+      <tr><td>6</td><td>Wk6</td><td class="bt">F. Personal Effectiveness, Communication &amp; Professional Ethics</td><td class="ma">E. Performance Measurement (Financial &amp; Non-Financial)</td><td class="fa">F. Preparing a Trial Balance</td><td>BT-M6 · MA-M6 · FA-M6</td><td>6h</td></tr>
+      <tr><td>7</td><td>Wk7</td><td class="bt">Revision: Sections A–C consolidation</td><td class="ma">F. Forecasting Techniques &amp; Use of Spreadsheets</td><td class="fa">G. Preparing Basic Financial Statements — Sole Trader</td><td>BT-M7 · MA-M7 · FA-M7</td><td>6h</td></tr>
+      <tr><td>8</td><td>Wk8</td><td class="bt">Revision: Sections D–F consolidation</td><td class="ma">Revision: Costing &amp; Budgeting consolidation</td><td class="fa">G cont. Preparing Basic Financial Statements — Limited Company</td><td>BT-M8 · MA-M8 · FA-M8</td><td>6h</td></tr>
+      <tr><td>9</td><td>Wk9</td><td class="bt">Full syllabus recap + weak-topic clinic</td><td class="ma">Revision: Standard Costing &amp; Performance consolidation</td><td class="fa">H. Consolidated Statements (basic) &amp; Interpretation of Accounts</td><td>BT-M9 · MA-M9 · FA-M9</td><td>6h</td></tr>
+      <tr><td>10</td><td>Wk10</td><td class="bt" colspan="3" style="text-align:center;">🏆 Full-Length CBE-Replica Mock Week — one 2-hour paper-format mock per subject, unlimited re-attempts from question bank thereafter</td><td>Full Mock BT/MA/FA</td><td>6h</td></tr>
+    </table>
+    <p style="font-size:.82rem;color:#5a6472;">*Exact calendar dates to be confirmed with Dr. Shallu once cohort start date is fixed; structure shown is week-relative.</p>
+  </div>
+
+  <div class="card">
+    <h2>Weekly Rhythm (Per Paper)</h2>
+    <table>
+      <tr><th>Day</th><th>Activity</th><th>Duration</th></tr>
+      <tr><td>Mon–Thu</td><td>Self-study: video lecture + notes for the week's topic (per paper, on Papers &amp; Resources page)</td><td>~90 min/paper spread across week</td></tr>
+      <tr><td>Fri</td><td>Topic Practice Test — 10–15 questions, instant scoring + full explanation for every wrong answer</td><td>20–30 min/paper</td></tr>
+      <tr><td>Sat</td><td>Weekly Mock — paper-format mini exam mirroring that week's ACCA section style</td><td>30–45 min/paper</td></tr>
+      <tr><td>Anytime after Wk10</td><td>Full-Length CBE-Replica Mock — random 2-hr paper pulled from full question bank, unlimited attempts</td><td>2 hrs/attempt</td></tr>
+    </table>
+  </div>
+
+  <div class="note">
+    <b>Note on real exam booking:</b> Unlike the MBA program's single fixed exam date, ACCA Knowledge papers are on-demand CBEs — students can book BT, MA or FA at an approved centre any time once the faculty-in-charge signs off readiness (typically after 2 consecutive full-mock passes ≥60%).
+  </div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GJIMT ACCA Prep LMS — Applied Knowledge Level</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{
+    --navy:#0f2544; --blue:#1c5cae; --gold:#d6a44a; --green:#1f8a5f;
+    --purple:#6b3fa0; --orange:#c9701e; --grey:#8a94a3; --bg:#f4f6fa;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:var(--bg);color:#1a2233;}
+  header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:36px 24px;}
+  header h1{margin:0 0 8px;font-size:1.8rem;}
+  header p{margin:0;opacity:.9;max-width:800px;}
+  nav{background:#fff;border-bottom:1px solid #dfe3ea;display:flex;gap:4px;padding:0 24px;flex-wrap:wrap;position:sticky;top:0;z-index:10;}
+  nav a{padding:14px 16px;text-decoration:none;color:var(--navy);font-weight:600;font-size:.92rem;border-bottom:3px solid transparent;}
+  nav a.active{border-bottom:3px solid var(--gold);color:var(--blue);}
+  main{max-width:1080px;margin:0 auto;padding:28px 24px 60px;}
+  .card{background:#fff;border-radius:10px;padding:22px 24px;margin-bottom:22px;box-shadow:0 1px 4px rgba(15,37,68,.08);}
+  h2{color:var(--navy);border-left:5px solid var(--gold);padding-left:12px;font-size:1.3rem;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem;}
+  th,td{border:1px solid #e2e6ee;padding:10px 12px;text-align:left;}
+  th{background:var(--navy);color:#fff;}
+  tr:nth-child(even){background:#f8f9fc;}
+  .level-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:16px;}
+  .level-card{border-radius:10px;padding:20px;color:#fff;position:relative;overflow:hidden;}
+  .level-open{background:linear-gradient(135deg,var(--blue),#123a6e);}
+  .level-locked{background:linear-gradient(135deg,#7d8798,#54606f);}
+  .level-card h3{margin-top:0;}
+  .badge{display:inline-block;background:rgba(255,255,255,.22);padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:700;margin-bottom:8px;}
+  .lock-icon{font-size:1.4rem;position:absolute;top:16px;right:18px;opacity:.7;}
+  .paper-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:14px;}
+  .paper{border-radius:8px;padding:16px;border-top:5px solid var(--purple);background:#faf8ff;}
+  .paper.ma{border-color:var(--green);background:#f4fbf7;}
+  .paper.fa{border-color:var(--orange);background:#fff8f1;}
+  .paper h4{margin:0 0 6px;}
+  .pill{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 9px;border-radius:20px;background:var(--navy);color:#fff;margin-left:6px;}
+  .exempt-box{background:#fff4e0;border:1px solid #e8c98a;border-radius:8px;padding:16px 18px;margin-top:14px;}
+  .exempt-box h4{margin:0 0 8px;color:#8a5a00;}
+  footer{text-align:center;padding:20px;color:#8a94a3;font-size:.85rem;}
+  .cta{display:inline-block;margin-top:10px;background:var(--gold);color:#1a2233;padding:9px 16px;border-radius:6px;font-weight:700;text-decoration:none;font-size:.88rem;}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎓 GJIMT ACCA Preparation LMS</h1>
+  <p>For BCom (Hons) enrolled students and already-ACCA-qualified students continuing their journey. Faculty In-Charge: <b>Dr. Shallu</b>. Resources currently sourced from ACCA Global (India) and open/free platforms — institutional resource access to be added.</p>
+</header>
+<nav>
+  <a href="index.html" class="active">🏠 Home</a>
+  <a href="calendar.html">📅 Weekly Calendar</a>
+  <a href="papers.html">📘 Papers &amp; Resources</a>
+  <a href="mock.html">📝 Practice &amp; Mock Tests</a>
+  <a href="faculty.html">👩‍🏫 Faculty Dashboard</a>
+  <a href="users.html">👤 My Dashboard</a>
+  <a href="resource-guide.html">🧭 Resource &amp; Exemption Guide</a>
+</nav>
+<main>
+
+  <div class="card">
+    <h2>Program Overview</h2>
+    <table>
+      <tr><th>Item</th><th>Detail</th></tr>
+      <tr><td>Program</td><td>GJIMT ACCA Preparation — Applied Knowledge Level (Phase 1 of full ACCA pathway)</td></tr>
+      <tr><td>Eligibility Track 1</td><td>BCom (Hons) enrolled students — no prior ACCA registration</td></tr>
+      <tr><td>Eligibility Track 2</td><td>Students who have already completed BCom (Hons) / hold prior qualifications — may be <b>exempt</b> from some/all Knowledge papers; see Resource &amp; Exemption Guide</td></tr>
+      <tr><td>Faculty In-Charge</td><td>Dr. Shallu (overall), with one subject faculty per paper (BT / MA / FA)</td></tr>
+      <tr><td>Papers (this phase)</td><td>BT — Business and Technology · MA — Management Accounting · FA — Financial Accounting</td></tr>
+      <tr><td>Study Mode</td><td>All 3 papers run <b>in parallel</b> — different faculty per paper — minimum 2 hours/week per paper (6 hrs/week total)</td></tr>
+      <tr><td>Structure per topic</td><td>Resources → Topic Practice Test (with wrong-answer explanations) → Weekly Mock → Full-Length CBE-Replica Mock (random question bank, unlimited attempts)</td></tr>
+      <tr><td>Exam Format (all 3 papers)</td><td>On-demand Computer-Based Exam (CBE), 2 hours each, pass mark 50%</td></tr>
+      <tr><td>Philosophy</td><td>Concept clarity first → guided practice → timed simulation → readiness for real ACCA CBE booking</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Choose Your ACCA Level</h2>
+    <p>The ACCA Qualification has three stages. This LMS currently activates <b>Applied Knowledge</b>. Skills and Professional levels unlock as GJIMT institutional resources and faculty are onboarded.</p>
+    <div class="level-grid">
+      <div class="level-card level-open">
+        <span class="badge">ACTIVE NOW</span>
+        <h3>1️⃣ Applied Knowledge</h3>
+        <p>3 papers · on-demand CBE · foundation of accounting, business &amp; technology</p>
+        <a class="cta" href="papers.html">Enter Knowledge Level →</a>
+      </div>
+      <div class="level-card level-locked">
+        <span class="lock-icon">🔒</span>
+        <span class="badge">COMING NEXT</span>
+        <h3>2️⃣ Applied Skills</h3>
+        <p>6 papers · LW, PM, TX, FR, AA, FM · unlocks after Knowledge completion or via exemption</p>
+      </div>
+      <div class="level-card level-locked">
+        <span class="lock-icon">🔒</span>
+        <span class="badge">FUTURE PHASE</span>
+        <h3>3️⃣ Strategic Professional</h3>
+        <p>2 Essentials + 2 Options + Ethics &amp; Professional Skills module</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Knowledge Level — 3 Papers (Parallel Tracks)</h2>
+    <div class="paper-row">
+      <div class="paper bt">
+        <h4>BT <span class="pill">Business &amp; Technology</span></h4>
+        <p>Business organisation, governance, external environment, leadership, communication, ethics. Objective-test only exam.</p>
+      </div>
+      <div class="paper ma">
+        <h4>MA <span class="pill">Management Accounting</span></h4>
+        <p>Costing, budgeting, standard costing &amp; variances, performance measurement. Section A (OT) + Section B (3 MTQs).</p>
+      </div>
+      <div class="paper fa">
+        <h4>FA <span class="pill">Financial Accounting</span></h4>
+        <p>Double-entry bookkeeping, trial balance, financial statements, basic consolidation, interpretation. Heaviest-weighted paper.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="exempt-box">
+    <h4>⚡ Already completed BCom (Hons) or hold other qualifications?</h4>
+    <p>You may be eligible for <b>ACCA exemptions</b> on some or all of BT, MA and FA (BCom graduates typically receive up to 5 Knowledge + Skills-level exemptions from ACCA Global, subject to individual assessment). Exempt students should <b>skip directly to Applied Skills readiness modules</b> once available, or use this Knowledge track purely as a refresher before Skills level. Check your exact exemption entitlement on the Resource &amp; Exemption Guide page.</p>
+    <a class="cta" href="resource-guide.html">Check Exemption Eligibility →</a>
+  </div>
+
+</main>
+<footer>GJIMT ACCA Prep LMS · Applied Knowledge Level · Faculty In-Charge: Dr. Shallu · Built on the GJIMT AI-Integrated LMS framework</footer>
+</body>
+</html>

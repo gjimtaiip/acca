@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Dashboard — ACCA Knowledge Level LMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{--navy:#0f2544;--blue:#1c5cae;--gold:#d6a44a;--green:#1f8a5f;--purple:#6b3fa0;--orange:#c9701e;--bg:#f4f6fa;}
+  *{box-sizing:border-box;}
+  body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:var(--bg);color:#1a2233;}
+  header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:30px 24px;}
+  header h1{margin:0 0 6px;font-size:1.6rem;}
+  nav{background:#fff;border-bottom:1px solid #dfe3ea;display:flex;gap:4px;padding:0 24px;flex-wrap:wrap;position:sticky;top:0;z-index:10;}
+  nav a{padding:14px 16px;text-decoration:none;color:var(--navy);font-weight:600;font-size:.92rem;border-bottom:3px solid transparent;}
+  nav a.active{border-bottom:3px solid var(--gold);color:var(--blue);}
+  main{max-width:1080px;margin:0 auto;padding:28px 24px 60px;}
+  .card{background:#fff;border-radius:10px;padding:22px 24px;margin-bottom:22px;box-shadow:0 1px 4px rgba(15,37,68,.08);}
+  h2{color:var(--navy);border-left:5px solid var(--gold);padding-left:12px;font-size:1.3rem;}
+  .progress-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:14px;}
+  .prog-card{border-radius:8px;padding:16px 18px;color:#fff;}
+  .prog-bt{background:linear-gradient(135deg,var(--purple),#4a2b70);}
+  .prog-ma{background:linear-gradient(135deg,var(--green),#125f42);}
+  .prog-fa{background:linear-gradient(135deg,var(--orange),#8a4f14);}
+  .prog-card h4{margin:0 0 6px;}
+  .bar-bg{background:rgba(255,255,255,.3);border-radius:20px;height:10px;margin:8px 0;overflow:hidden;}
+  .bar-fill{background:#fff;height:100%;width:0%;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.88rem;}
+  th,td{border:1px solid #e2e6ee;padding:9px 10px;text-align:left;}
+  th{background:var(--navy);color:#fff;}
+  tr:nth-child(even){background:#f8f9fc;}
+  .status-not{color:#c0392b;font-weight:700;}
+  .status-exempt{background:#fff4e0;border:1px solid #e8c98a;border-radius:8px;padding:14px 18px;margin-top:14px;}
+</style>
+</head>
+<body>
+<header>
+  <h1>My Dashboard — ACCA Applied Knowledge Level</h1>
+  <p style="opacity:.9;margin:0;">Your User ID and password were shared by faculty. Contact <b>acca-fac-shallu</b> if you cannot log in.</p>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="calendar.html">Weekly Calendar</a>
+  <a href="papers.html">Papers &amp; Resources</a>
+  <a href="mock.html">Practice &amp; Mock Tests</a>
+  <a href="faculty.html">Faculty Dashboard</a>
+  <a href="users.html" class="active">My Dashboard</a>
+  <a href="resource-guide.html">Resource &amp; Exemption Guide</a>
+</nav>
+<main>
+
+  <div class="card">
+    <h2>My Progress by Paper</h2>
+    <p>Progress is self-tracked as you complete Topic Practice Tests and Weekly Mocks. Faculty confirms final readiness for real exam booking.</p>
+    <div class="progress-grid">
+      <div class="prog-card prog-bt">
+        <h4>BT — Business &amp; Technology</h4>
+        <div class="bar-bg"><div class="bar-fill" style="width:0%;"></div></div>
+        <p style="margin:4px 0;font-size:.85rem;">0/5 topics complete · 0 Full-Length Mocks attempted</p>
+      </div>
+      <div class="prog-card prog-ma">
+        <h4>MA — Management Accounting</h4>
+        <div class="bar-bg"><div class="bar-fill" style="width:0%;"></div></div>
+        <p style="margin:4px 0;font-size:.85rem;">0/5 topics complete · 0 Full-Length Mocks attempted</p>
+      </div>
+      <div class="prog-card prog-fa">
+        <h4>FA — Financial Accounting</h4>
+        <div class="bar-bg"><div class="bar-fill" style="width:0%;"></div></div>
+        <p style="margin:4px 0;font-size:.85rem;">0/5 topics complete · 0 Full-Length Mocks attempted</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>My Weekly Schedule at a Glance</h2>
+    <table>
+      <tr><th>Week</th><th>BT Topic</th><th>MA Topic</th><th>FA Topic</th><th>Status</th></tr>
+      <tr><td>1</td><td>Business Organisation &amp; External Environment</td><td>Nature, Source &amp; Purpose of Mgmt Info</td><td>Context &amp; Qualitative Characteristics</td><td class="status-not">Upcoming</td></tr>
+      <tr><td>2</td><td>Governance &amp; Sustainability</td><td>Cost Accounting Techniques I</td><td>Double-Entry Bookkeeping</td><td class="status-not">Upcoming</td></tr>
+      <tr><td>3</td><td>Business Functions &amp; IT Systems</td><td>Cost Accounting Techniques II</td><td>Recording Transactions I</td><td class="status-not">Upcoming</td></tr>
+      <tr><td>4</td><td>Technology &amp; Information Systems</td><td>Budgeting &amp; Budgetary Control</td><td>Recording Transactions II</td><td class="status-not">Upcoming</td></tr>
+      <tr><td>5</td><td>Leadership &amp; Motivation</td><td>Standard Costing &amp; Variances</td><td>Control Accounts &amp; Reconciliations</td><td class="status-not">Upcoming</td></tr>
+      <tr><td>6</td><td>Personal Effectiveness &amp; Ethics</td><td>Performance Measurement</td><td>Preparing a Trial Balance</td><td class="status-not">Upcoming</td></tr>
+      <tr><td>7–9</td><td>Revision &amp; recap</td><td>Forecasting &amp; consolidation</td><td>Financial Statements &amp; Consolidation</td><td class="status-not">Upcoming</td></tr>
+      <tr><td>10</td><td colspan="3" style="text-align:center;">Full-Length CBE-Replica Mock Week — all 3 papers</td><td class="status-not">Upcoming</td></tr>
+    </table>
+  </div>
+
+  <div class="status-exempt">
+    <h4>Already completed BCom (Hons) / hold prior qualifications?</h4>
+    <p>Check your exemption eligibility on the <a href="resource-guide.html">Resource &amp; Exemption Guide</a> page. If exempt from a paper, inform Dr. Shallu so your dashboard status is updated and you can proceed toward Applied Skills readiness materials instead of repeating that paper's Knowledge content.</p>
+  </div>
+
+</main>
+</body>
+</html>
