@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Papers &amp; Resources — ACCA Applied Skills LMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{--navy:#0f2544;--blue:#1c5cae;--gold:#d6a44a;--bg:#f4f6fa;}
+  *{box-sizing:border-box;}
+  body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:var(--bg);color:#1a2233;}
+  header{background:linear-gradient(135deg,var(--navy),#6b3fa0);color:#fff;padding:30px 24px;}
+  header h1{margin:0 0 6px;font-size:1.6rem;}
+  nav{background:#fff;border-bottom:1px solid #dfe3ea;display:flex;gap:4px;padding:0 24px;flex-wrap:wrap;align-items:center;position:sticky;top:0;z-index:10;}
+  nav a{padding:14px 16px;text-decoration:none;color:var(--navy);font-weight:600;font-size:.88rem;border-bottom:3px solid transparent;}
+  nav a.active{border-bottom:3px solid var(--gold);color:var(--blue);}
+  main{max-width:1080px;margin:0 auto;padding:28px 24px 60px;}
+  .card{background:#fff;border-radius:10px;padding:22px 24px;margin-bottom:22px;box-shadow:0 1px 4px rgba(15,37,68,.08);}
+  h2{color:var(--navy);border-left:5px solid var(--gold);padding-left:12px;font-size:1.3rem;}
+  .tabs{display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap;}
+  .tab-btn{border:none;background:#eef1f7;color:var(--navy);font-weight:700;padding:9px 14px;border-radius:20px;cursor:pointer;font-size:.85rem;}
+  .tab-btn.on-lw{background:#6b3fa0;color:#fff;}
+  .tab-btn.on-pm{background:#1f8a5f;color:#fff;}
+  .tab-btn.on-tx{background:#c9701e;color:#fff;}
+  .tab-btn.on-fr{background:#1c5cae;color:#fff;}
+  .tab-btn.on-aa{background:#0e7c86;color:#fff;}
+  .tab-btn.on-fm{background:#b0334d;color:#fff;}
+  .paper-section{display:none;}
+  .paper-section.show{display:block;}
+  .topic{border:1px solid #e2e6ee;border-radius:8px;padding:16px 18px;margin-bottom:14px;background:#fafbfd;}
+  .topic h4{margin:0 0 8px;color:var(--navy);}
+  .resource-list{margin:8px 0 12px;padding-left:20px;font-size:.9rem;}
+  .resource-list a{color:var(--blue);text-decoration:none;}
+  .test-link{display:inline-block;margin-top:6px;background:var(--gold);color:#1a2233;padding:6px 14px;border-radius:6px;font-weight:700;font-size:.82rem;text-decoration:none;}
+  .lesson-btn{border:none;background:#e7edf7;color:var(--blue);font-weight:700;padding:7px 14px;border-radius:6px;cursor:pointer;font-size:.85rem;margin-bottom:8px;}
+  .lesson-box{background:#fffaf0;border-left:4px solid var(--gold);border-radius:8px;padding:14px 18px;margin-bottom:12px;font-size:.9rem;line-height:1.5;}
+  .lesson-box table{font-size:.85rem;width:100%;border-collapse:collapse;margin:8px 0;}
+  .lesson-box th,.lesson-box td{padding:6px;border:1px solid #ccc;}
+  .lesson-box th{background:#0f2544;color:#fff;}
+  table.fmt{width:100%;border-collapse:collapse;margin:14px 0;font-size:.88rem;}
+  table.fmt th,table.fmt td{border:1px solid #e2e6ee;padding:9px 10px;text-align:left;}
+  table.fmt th{background:var(--navy);color:#fff;}
+  #auth-status{font-size:.82rem;color:#5a6472;margin-left:auto;padding:14px 16px;}
+  #auth-status a{color:var(--blue);text-decoration:none;font-weight:600;}
+</style>
+<script>
+  function showPaper(p){
+    document.querySelectorAll('.paper-section').forEach(function(s){s.classList.remove('show');});
+    document.getElementById(p).classList.add('show');
+    document.querySelectorAll('.tab-btn').forEach(function(b){b.className='tab-btn';});
+    document.getElementById('btn-'+p).classList.add('on-'+p);
+  }
+  function toggleLesson(id){
+    const box = document.getElementById('lesson-'+id);
+    box.style.display = (box.style.display === 'none') ? 'block' : 'none';
+  }
+</script>
+</head>
+<body>
+<header>
+  <h1>Papers &amp; Resources — Applied Skills Level</h1>
+  <p style="opacity:.9;margin:0;">6 papers, 33 topics. Each: Simple Lesson -&gt; Resources -&gt; Practice Test. Resources from OpenTuition (free) and ACCA Global.</p>
+</header>
+<nav>
+  <a href="skills-index.html">Home</a>
+  <a href="skills-papers.html" class="active">Papers &amp; Resources</a>
+  <a href="skills-mock.html">Practice &amp; Mock Tests</a>
+  <a href="skills-users.html">My Dashboard</a>
+  <a href="faculty.html">Faculty Dashboard</a>
+  <a href="index.html">Knowledge Level Home</a>
+  <span id="auth-status"></span>
+</nav>
+<main>
+  <div class="card">
+    <div class="tabs">
+      <button class="tab-btn" id="btn-lw" onclick="showPaper('lw')">LW</button>
+      <button class="tab-btn" id="btn-pm" onclick="showPaper('pm')">PM</button>
+      <button class="tab-btn" id="btn-tx" onclick="showPaper('tx')">TX</button>
+      <button class="tab-btn" id="btn-fr" onclick="showPaper('fr')">FR</button>
+      <button class="tab-btn" id="btn-aa" onclick="showPaper('aa')">AA</button>
+      <button class="tab-btn" id="btn-fm" onclick="showPaper('fm')">FM</button>
+    </div>
+
+    <div class="paper-section" id="lw">
+      <h2>LW — Corporate and Business Law</h2>
+      <p><b>Format:</b> Objective Test only (Section A: 45 Qs = 70 marks; Section B: 5 scenarios = 30 marks) &middot; 2 hours &middot; Pass mark 50%</p>
+
+      <div class="topic"><h4>Topic 1: Essential Elements of the Legal System</h4>
+      <button class="lesson-btn" onclick="toggleLesson('lw1')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-lw1" style="display:none;">
+      <p><b>What this is about:</b> Where law comes from, and how disputes get resolved without court.</p>
+      <p><b>Sources of law:</b> Legislation (laws passed by parliament) and Case Law/Precedent (binding court decisions).</p>
+      <p><b>Court structure:</b> Lower/Trial courts → Appeal courts → Supreme/Highest court (sets binding precedent for all).</p>
+      <p><b>ADR types:</b> Arbitration = binding decision by neutral 3rd party (like a private judge). Mediation = facilitated negotiation, no binding outcome imposed.</p>
+      <p><b>Exam tip:</b> Match the scenario to the right ADR method — arbitration for binding resolution, mediation for assisted negotiation.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/lw/" target="_blank">OpenTuition LW Free Notes (Legal System chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#lw-topic1">Take Topic 1 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 2: Law of Obligations (Contract &amp; Tort)</h4>
+      <button class="lesson-btn" onclick="toggleLesson('lw2')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-lw2" style="display:none;">
+      <p><b>4 essentials of a valid contract:</b> Offer, Acceptance, Consideration, Intention to create legal relations. Missing any = no contract.</p>
+      <p><b>Breach remedies:</b> Damages (money — the main remedy), Specific performance (court orders performance), Rescission (contract cancelled, parties restored).</p>
+      <p><b>Negligence — 3 elements to prove:</b> Duty of care existed → Duty was breached → Breach caused damage.</p>
+      <p><b>Exam tip:</b> Professional negligence scenarios (e.g. bad accountant advice) — check all 3 negligence elements before concluding liability.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/lw/" target="_blank">OpenTuition LW Free Notes (Contract &amp; Tort chapters)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#lw-topic2">Take Topic 2 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 3: Employment Law</h4>
+      <button class="lesson-btn" onclick="toggleLesson('lw3')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-lw3" style="display:none;">
+      <p><b>Employee vs self-employed:</b> Tested by control, integration, mutuality of obligation. Employees get statutory protections; self-employed don't.</p>
+      <table><tr><th>Type</th><th>Meaning</th></tr><tr><td>Wrongful dismissal</td><td>Breach of CONTRACT (e.g. no notice given)</td></tr><tr><td>Unfair dismissal</td><td>No fair statutory REASON/procedure</td></tr></table>
+      <p><b>Redundancy:</b> The JOB no longer exists (not a performance issue).</p>
+      <p><b>Exam tip:</b> Check for a valid statutory reason AND fair procedure to assess unfair dismissal.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/lw/" target="_blank">OpenTuition LW Free Notes (Employment Law chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#lw-topic3">Take Topic 3 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 4: Formation &amp; Constitution of Business Organisations</h4>
+      <button class="lesson-btn" onclick="toggleLesson('lw4')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-lw4" style="display:none;">
+      <p><b>Key distinction:</b> Sole trader/partnership have NO separate legal identity (unlimited liability). A company has SEPARATE legal identity ("corporate veil") — shareholders get limited liability.</p>
+      <p><b>Incorporation:</b> Register → file Articles of Association → receive Certificate of Incorporation → company is now a distinct legal person.</p>
+      <p><b>Exam tip:</b> "Lifting the corporate veil" — courts can ignore limited liability in fraud cases.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/lw/" target="_blank">OpenTuition LW Free Notes (Business Organisations chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#lw-topic4">Take Topic 4 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 5: Capital &amp; Financing of Companies</h4>
+      <button class="lesson-btn" onclick="toggleLesson('lw5')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-lw5" style="display:none;">
+      <table><tr><th>Type</th><th>Holder is a...</th><th>Return</th></tr><tr><td>Share capital</td><td>Owner</td><td>Dividend (not guaranteed)</td></tr><tr><td>Loan capital</td><td>Creditor</td><td>Interest (contractual)</td></tr></table>
+      <p><b>Capital Maintenance Rule:</b> Protects creditors — dividends can only come from distributable/realised profits, not share capital.</p>
+      <p><b>Exam tip:</b> Paying dividends with no distributable profit = unlawful, directors may be personally liable.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/lw/" target="_blank">OpenTuition LW Free Notes (Capital &amp; Financing chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#lw-topic5">Take Topic 5 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 6: Management, Administration &amp; Insolvency</h4>
+      <button class="lesson-btn" onclick="toggleLesson('lw6')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-lw6" style="display:none;">
+      <p><b>Directors' duties (core list):</b> Act within powers, promote company success, exercise judgement/care, avoid conflicts of interest.</p>
+      <table><tr><th>Procedure</th><th>Goal</th></tr><tr><td>Administration</td><td>Rescue the company</td></tr><tr><td>Liquidation</td><td>Sell assets, pay creditors, dissolve</td></tr></table>
+      <p><b>Exam tip:</b> Wrongful trading = continuing to trade knowing insolvency is unavoidable (no fraud intent needed).</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/lw/" target="_blank">OpenTuition LW Free Notes (Insolvency &amp; Fraud chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#lw-topic6">Take Topic 6 Practice Test</a></div>
+    </div>
+
+    <div class="paper-section" id="pm">
+      <h2>PM — Performance Management</h2>
+      <p><b>Format:</b> Section A 15 OTQs (30 marks); Section B 3 case OTQs (30 marks); Section C 2 constructed response (40 marks) &middot; 3 hours &middot; Pass mark 50%</p>
+
+      <div class="topic"><h4>Topic 1: Management Information Systems &amp; Data Analytics</h4>
+      <button class="lesson-btn" onclick="toggleLesson('pm1')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-pm1" style="display:none;">
+      <p><b>Big Data 3 Vs:</b> Volume, Velocity, Variety.</p>
+      <p><b>4 types of analytics (increasing sophistication):</b> Descriptive (what happened?) → Diagnostic (why?) → Predictive (what will happen?) → Prescriptive (what to do?).</p>
+      <p><b>Exam tip:</b> Identify which analytics type a described tool represents, and note data quality/privacy risks of over-relying on data.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/pm/" target="_blank">OpenTuition PM Free Notes (MIS &amp; Data Analytics chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#pm-topic1">Take Topic 1 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 2: Specialist Costing Techniques</h4>
+      <button class="lesson-btn" onclick="toggleLesson('pm2')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-pm2" style="display:none;">
+      <p style="background:#f0f4fa;padding:8px;border-radius:6px;font-family:monospace;">Target Cost = Target Selling Price − Target Profit Margin</p>
+      <p><b>Life-cycle costing:</b> ALL costs across a product's life (design → disposal), not just manufacturing.</p>
+      <p><b>Throughput Accounting:</b> Rank products by throughput per unit of the BOTTLENECK resource.</p>
+      <p><b>TQM 4 quality costs:</b> Prevention, Appraisal, Internal failure, External failure.</p>
+      <p><b>Exam tip:</b> Throughput questions — always identify the bottleneck first.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/pm/" target="_blank">OpenTuition PM Free Notes (Specialist Costing chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#pm-topic2">Take Topic 2 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 3: Decision-Making Techniques</h4>
+      <button class="lesson-btn" onclick="toggleLesson('pm3')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-pm3" style="display:none;">
+      <p><b>Relevant costing rule:</b> Only future, incremental cash flows. Ignore sunk costs.</p>
+      <p style="background:#f0f4fa;padding:8px;border-radius:6px;font-family:monospace;">Breakeven units = Fixed Costs / Contribution per unit</p>
+      <p><b>Limiting factor:</b> ONE scarce resource → rank by contribution per unit of THAT resource. TWO+ scarce resources → use Linear Programming.</p>
+      <p><b>Exam tip:</b> The classic trap is ranking by contribution per unit instead of per unit of scarce resource.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/pm/" target="_blank">OpenTuition PM Free Notes (Decision-Making chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#pm-topic3">Take Topic 3 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 4: Budgeting &amp; Control</h4>
+      <button class="lesson-btn" onclick="toggleLesson('pm4')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-pm4" style="display:none;">
+      <p><b>Beyond Budgeting:</b> Critiques rigid annual budgets for encouraging short-termism/gaming.</p>
+      <p><b>Mix &amp; Yield variances</b> (splits of usage variance for multiple materials): Mix = different proportion used; Yield = output achieved from inputs.</p>
+      <p><b>Exam tip:</b> PM wants written interpretation of WHY variances arose, not just the number.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/pm/" target="_blank">OpenTuition PM Free Notes (Budgeting &amp; Control chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#pm-topic4">Take Topic 4 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 5: Performance Measurement &amp; Control</h4>
+      <button class="lesson-btn" onclick="toggleLesson('pm5')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-pm5" style="display:none;">
+      <p><b>Transfer pricing:</b> Price charged between divisions of the same company. If external market price exists, that's usually the fairest basis.</p>
+      <p><b>Building Blocks model (Fitzgerald &amp; Moon):</b> Dimensions, Standards (fair, achievable, owned), Rewards.</p>
+      <p><b>Exam tip:</b> Check for an external market price first before recommending cost-based transfer pricing.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/pm/" target="_blank">OpenTuition PM Free Notes (Performance Measurement chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#pm-topic5">Take Topic 5 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 6: Environmental, Ethical &amp; Employability Skills</h4>
+      <button class="lesson-btn" onclick="toggleLesson('pm6')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-pm6" style="display:none;">
+      <p><b>Environmental cost categories:</b> Conventional (energy, water), Contingent (future clean-up/fines), Reputational, Societal (borne by community).</p>
+      <p><b>Exam tip:</b> The CBE platform tests basic spreadsheet skills directly — practice on ACCA's Practice Platform.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/pm/" target="_blank">OpenTuition PM Free Notes (Environmental &amp; Ethical Issues chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#pm-topic6">Take Topic 6 Practice Test</a></div>
+    </div>
+
+    <div class="paper-section" id="tx">
+      <h2>TX — Taxation</h2>
+      <p><b>Format:</b> Section A 15 OTQs (30 marks); Section B 3 case OTQs (30 marks); Section C 3 constructed response (40 marks) &middot; 3 hours &middot; Pass mark 50%</p>
+
+      <div class="topic"><h4>Topic 1: Tax System &amp; Administration</h4>
+      <button class="lesson-btn" onclick="toggleLesson('tx1')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-tx1" style="display:none;">
+      <table><tr><th>Type</th><th>Who bears it</th><th>Example</th></tr><tr><td>Direct</td><td>The taxed person</td><td>Income tax</td></tr><tr><td>Indirect</td><td>Passed to consumer</td><td>VAT/GST</td></tr></table>
+      <p><b>Exam tip:</b> Memorise specific filing deadlines and penalty calculations for your jurisdiction.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/tx/" target="_blank">OpenTuition TX Free Notes (Tax System chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#tx-topic1">Take Topic 1 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 2: Income Tax Liabilities (Individuals)</h4>
+      <button class="lesson-btn" onclick="toggleLesson('tx2')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-tx2" style="display:none;">
+      <p style="background:#f0f4fa;padding:8px;border-radius:6px;font-family:monospace;">Employment Income + Other Income − Personal Allowance = Taxable Income → apply rate bands</p>
+      <p><b>Progressive bands:</b> You never pay the top rate on ALL income, only the portion in that band.</p>
+      <p><b>Exam tip:</b> Follow the standard computation order exactly — "own figure" credit is given even if an earlier number is wrong.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/tx/" target="_blank">OpenTuition TX Free Notes (Income Tax chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#tx-topic2">Take Topic 2 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 3: Corporation Tax Liabilities</h4>
+      <button class="lesson-btn" onclick="toggleLesson('tx3')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-tx3" style="display:none;">
+      <p style="background:#f0f4fa;padding:8px;border-radius:6px;font-family:monospace;">Accounting Profit +/− Adjustments − Capital Allowances = Taxable Total Profits</p>
+      <p><b>Capital Allowances</b> = tax's own version of depreciation, completely separate rates from accounting depreciation.</p>
+      <p><b>Exam tip:</b> Always start from the accounting profit figure given, then adjust line-by-line.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/tx/" target="_blank">OpenTuition TX Free Notes (Corporation Tax chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#tx-topic3">Take Topic 3 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 4: Chargeable Gains</h4>
+      <button class="lesson-btn" onclick="toggleLesson('tx4')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-tx4" style="display:none;">
+      <p style="background:#f0f4fa;padding:8px;border-radius:6px;font-family:monospace;">Sale Proceeds − Allowable Costs = Chargeable Gain − Reliefs = Taxable Gain</p>
+      <p><b>Rollover relief:</b> Defers gain when reinvesting in a new qualifying business asset.</p>
+      <p><b>Exam tip:</b> Always check for available reliefs BEFORE calculating final tax.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/tx/" target="_blank">OpenTuition TX Free Notes (Chargeable Gains chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#tx-topic4">Take Topic 4 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 5: Inheritance Tax &amp; Other Taxes</h4>
+      <button class="lesson-btn" onclick="toggleLesson('tx5')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-tx5" style="display:none;">
+      <p><b>IHT:</b> Charged on estate value above the nil-rate band, plus certain lifetime gifts.</p>
+      <p><b>Taper relief:</b> Reduces IHT rate on gifts as more years pass before death.</p>
+      <p><b>Exam tip:</b> Get the "look-back" timeline right before calculating IHT on lifetime gifts.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/tx/" target="_blank">OpenTuition TX Free Notes (Inheritance Tax chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#tx-topic5">Take Topic 5 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 6: Value Added Tax (VAT/GST)</h4>
+      <button class="lesson-btn" onclick="toggleLesson('tx6')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-tx6" style="display:none;">
+      <p style="background:#f0f4fa;padding:8px;border-radius:6px;font-family:monospace;">Net VAT payable = Output Tax − Input Tax</p>
+      <p><b>Blocked input tax:</b> e.g. VAT on client entertaining is commonly non-reclaimable.</p>
+      <p><b>Exam tip:</b> Check for blocked input tax categories before calculating net VAT.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/tx/" target="_blank">OpenTuition TX Free Notes (VAT chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#tx-topic6">Take Topic 6 Practice Test</a></div>
+    </div>
+
+    <div class="paper-section" id="fr">
+      <h2>FR — Financial Reporting</h2>
+      <p><b>Format:</b> Section A 15 OTQs (30 marks); Section B 3 case OTQs (30 marks); Section C 2 constructed response (40 marks) &middot; 3 hours &middot; Pass mark 50%</p>
+
+      <div class="topic"><h4>Topic 1: Conceptual &amp; Regulatory Framework</h4>
+      <button class="lesson-btn" onclick="toggleLesson('fr1')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-fr1" style="display:none;">
+      <p style="background:#f0f4fa;padding:8px;border-radius:6px;">IFRS Foundation (oversees) → IASB (writes standards) → Countries adopt IFRS</p>
+      <p><b>Recognition:</b> Item meets element definition AND providing info about it is useful.</p>
+      <p><b>Exam tip:</b> Link answers back to Framework principles when asked "why" a treatment is required.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/fr/" target="_blank">OpenTuition FR Free Notes (Conceptual Framework chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#fr-topic1">Take Topic 1 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 2: Accounting for Transactions</h4>
+      <button class="lesson-btn" onclick="toggleLesson('fr2')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-fr2" style="display:none;">
+      <table><tr><th>Standard</th><th>Covers</th></tr><tr><td>IAS 16</td><td>PPE</td></tr><tr><td>IAS 38</td><td>Intangibles</td></tr><tr><td>IAS 37</td><td>Provisions</td></tr><tr><td>IFRS 15</td><td>Revenue (5-step model)</td></tr><tr><td>IFRS 16</td><td>Leases (on balance sheet)</td></tr></table>
+      <p><b>Exam tip:</b> IFRS 16 is heavily tested — almost all leases now create a Right-of-Use Asset and Lease Liability.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/fr/" target="_blank">OpenTuition FR Free Notes (Accounting for Transactions chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#fr-topic2">Take Topic 2 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 3: Single Entity Financial Statements</h4>
+      <button class="lesson-btn" onclick="toggleLesson('fr3')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-fr3" style="display:none;">
+      <p><b>3 statements:</b> P&amp;L, Financial Position, Cash Flows.</p>
+      <p><b>Indirect cash flow method:</b> Net Profit → add back non-cash items → adjust working capital → Operating Cash Flow.</p>
+      <p><b>Exam tip:</b> Translate each written adjustment note into the correct double entry, one at a time.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/fr/" target="_blank">OpenTuition FR Free Notes (Single Entity Financial Statements chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#fr-topic3">Take Topic 3 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 4: Consolidated Financial Statements</h4>
+      <button class="lesson-btn" onclick="toggleLesson('fr4')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-fr4" style="display:none;">
+      <table><tr><th>Relationship</th><th>Ownership</th><th>Treatment</th></tr><tr><td>Subsidiary</td><td>&gt;50%</td><td>Full consolidation</td></tr><tr><td>Associate</td><td>20-50%</td><td>Equity method</td></tr></table>
+      <p style="background:#f0f4fa;padding:8px;border-radius:6px;font-family:monospace;">Goodwill = Consideration + NCI at acquisition − Fair value of net assets acquired</p>
+      <p><b>Exam tip:</b> Calculate goodwill and NCI FIRST in a separate working before the consolidated SOFP.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/fr/" target="_blank">OpenTuition FR Free Notes (Consolidated Financial Statements chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#fr-topic4">Take Topic 4 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 5: Analysis &amp; Interpretation</h4>
+      <button class="lesson-btn" onclick="toggleLesson('fr5')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-fr5" style="display:none;">
+      <p><b>4 ratio categories:</b> Profitability, Liquidity, Efficiency, Gearing/Solvency.</p>
+      <p><b>Answer structure:</b> Calculate → state trend → suggest business reason → note limitations (e.g. accounting policy differences).</p>
+      <p><b>Exam tip:</b> Marks are for INSIGHT, not just correct arithmetic — always explain the "why."</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/fr/" target="_blank">OpenTuition FR Free Notes (Analysis &amp; Interpretation chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#fr-topic5">Take Topic 5 Practice Test</a></div>
+    </div>
+
+    <div class="paper-section" id="aa">
+      <h2>AA — Audit and Assurance</h2>
+      <p><b>Format:</b> Section A 3 case OTQs (30 marks); Section B 3 constructed response, 1x30+2x20 marks (70 marks) &middot; 3 hours &middot; Pass mark 50%</p>
+
+      <div class="topic"><h4>Topic 1: Audit Framework &amp; Regulation</h4>
+      <button class="lesson-btn" onclick="toggleLesson('aa1')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-aa1" style="display:none;">
+      <p><b>Purpose of audit:</b> Independent opinion on true and fair view. Gives "reasonable" (not absolute) assurance.</p>
+      <p><b>5 Ethics Threats:</b> Self-interest, Self-review, Advocacy, Familiarity, Intimidation.</p>
+      <p><b>Exam tip:</b> Always (1) identify the threat, (2) explain why, (3) recommend a specific safeguard.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/aa/" target="_blank">OpenTuition AA Free Notes (Audit Framework chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#aa-topic1">Take Topic 1 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 2: Planning &amp; Risk Assessment</h4>
+      <button class="lesson-btn" onclick="toggleLesson('aa2')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-aa2" style="display:none;">
+      <p style="background:#f0f4fa;padding:8px;border-radius:6px;font-family:monospace;">Audit Risk = Inherent Risk x Control Risk x Detection Risk</p>
+      <p><b>Materiality:</b> Judgement threshold above which misstatements would influence user decisions.</p>
+      <p><b>Exam tip:</b> ISA 240 fraud questions want fraud RISK INDICATORS identified in the scenario.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/aa/" target="_blank">OpenTuition AA Free Notes (Planning &amp; Risk Assessment chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#aa-topic2">Take Topic 2 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 3: Internal Control</h4>
+      <button class="lesson-btn" onclick="toggleLesson('aa3')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-aa3" style="display:none;">
+      <p><b>COSO's 5 components:</b> Control environment, Risk assessment, Information systems, Control activities, Monitoring.</p>
+      <p><b>Test of control</b> (control operating effectively) vs <b>Substantive procedure</b> (balance/transaction free from misstatement).</p>
+      <p><b>Exam tip:</b> Identify SPECIFIC control weaknesses in the scenario and recommend a specific fix for each.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/aa/" target="_blank">OpenTuition AA Free Notes (Internal Control chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#aa-topic3">Take Topic 3 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 4: Audit Evidence</h4>
+      <button class="lesson-btn" onclick="toggleLesson('aa4')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-aa4" style="display:none;">
+      <table><tr><th>Category</th><th>Key assertions</th></tr><tr><td>Transactions</td><td>Occurrence, Completeness, Accuracy, Cut-off</td></tr><tr><td>Balances</td><td>Existence, Rights &amp; Obligations, Completeness, Valuation</td></tr></table>
+      <p><b>Exam tip:</b> Match the RIGHT procedure to the RIGHT assertion — e.g. Completeness needs testing FORWARD from source documents.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/aa/" target="_blank">OpenTuition AA Free Notes (Audit Evidence chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#aa-topic4">Take Topic 4 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 5: Review &amp; Reporting</h4>
+      <button class="lesson-btn" onclick="toggleLesson('aa5')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-aa5" style="display:none;">
+      <table><tr><th>Opinion</th><th>When</th></tr><tr><td>Unmodified</td><td>No material issues</td></tr><tr><td>Qualified</td><td>Material but NOT pervasive</td></tr><tr><td>Adverse</td><td>Material AND pervasive</td></tr><tr><td>Disclaimer</td><td>Can't obtain evidence, potentially pervasive</td></tr></table>
+      <p><b>Exam tip:</b> Decision tree: Is there an issue? → Material? → Pervasive or contained?</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/aa/" target="_blank">OpenTuition AA Free Notes (Review &amp; Reporting chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#aa-topic5">Take Topic 5 Practice Test</a></div>
+    </div>
+
+    <div class="paper-section" id="fm">
+      <h2>FM — Financial Management</h2>
+      <p><b>Format:</b> Section A 15 OTQs (30 marks); Section B 3 case OTQs (30 marks); Section C 2 constructed response (40 marks) &middot; 3 hours &middot; Pass mark 50%</p>
+
+      <div class="topic"><h4>Topic 1: Financial Management Function &amp; Environment</h4>
+      <button class="lesson-btn" onclick="toggleLesson('fm1')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-fm1" style="display:none;">
+      <p><b>3 key decisions:</b> Investment, Financing, Dividend.</p>
+      <p><b>Primary objective:</b> Maximise shareholder wealth (market value), not just accounting profit.</p>
+      <p><b>Exam tip:</b> Discuss the agency problem and other stakeholders when asked to evaluate shareholder wealth as sole objective.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/fm/" target="_blank">OpenTuition FM Free Notes (Financial Management Function chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#fm-topic1">Take Topic 1 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 2: Working Capital Management</h4>
+      <button class="lesson-btn" onclick="toggleLesson('fm2')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-fm2" style="display:none;">
+      <table><tr><th>Model</th><th>Used for</th></tr><tr><td>EOQ</td><td>Optimal inventory order size</td></tr><tr><td>Baumol</td><td>Optimal cash balance (predictable)</td></tr><tr><td>Miller-Orr</td><td>Optimal cash balance (uncertain)</td></tr></table>
+      <p><b>Overtrading:</b> Growing profitably but running out of cash.</p>
+      <p><b>Exam tip:</b> Discount decisions need a full cost-benefit comparison (discount cost vs financing savings).</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/fm/" target="_blank">OpenTuition FM Free Notes (Working Capital Management chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#fm-topic2">Take Topic 2 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 3: Investment Appraisal</h4>
+      <button class="lesson-btn" onclick="toggleLesson('fm3')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-fm3" style="display:none;">
+      <table><tr><th>Method</th><th>Time value?</th><th>Rule</th></tr><tr><td>Payback</td><td>No</td><td>Shorter better</td></tr><tr><td>NPV</td><td>Yes</td><td>Accept if &gt;0</td></tr><tr><td>IRR</td><td>Yes</td><td>Accept if &gt; cost of capital</td></tr></table>
+      <p><b>Exam tip:</b> Lay out NPV in a clear year-by-year table; exclude depreciation but include capital allowance tax savings.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/fm/" target="_blank">OpenTuition FM Free Notes (Investment Appraisal chapter)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#fm-topic3">Take Topic 3 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 4: Business Finance &amp; Cost of Capital</h4>
+      <button class="lesson-btn" onclick="toggleLesson('fm4')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-fm4" style="display:none;">
+      <p><b>WACC:</b> Blended discount rate weighting Cost of Equity and after-tax Cost of Debt.</p>
+      <p><b>Why debt is "cheaper":</b> Interest is tax-deductible; lenders take less risk than shareholders.</p>
+      <p><b>Exam tip:</b> Only use WACC if the new project has similar risk/financing to existing operations.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/fm/" target="_blank">OpenTuition FM Free Notes (Business Finance &amp; Cost of Capital chapters)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#fm-topic4">Take Topic 4 Practice Test</a></div>
+
+      <div class="topic"><h4>Topic 5: Business Valuations &amp; Risk Management</h4>
+      <button class="lesson-btn" onclick="toggleLesson('fm5')">Show Simple Lesson</button>
+      <div class="lesson-box" id="lesson-fm5" style="display:none;">
+      <table><tr><th>Approach</th><th>Logic</th></tr><tr><td>Asset-based</td><td>Net assets, fair valued</td></tr><tr><td>Income-based</td><td>Earnings x P/E multiple</td></tr><tr><td>Cash flow-based</td><td>PV of future cash flows</td></tr></table>
+      <p><b>FX hedging:</b> Forward contracts (lock in rate, no upside) vs Options (right not obligation, pay premium, keeps upside).</p>
+      <p><b>Exam tip:</b> Calculate value using 2+ methods, then discuss which suits the scenario best.</p>
+      </div>
+      <ul class="resource-list"><li><a href="https://opentuition.com/acca/fm/" target="_blank">OpenTuition FM Free Notes (Business Valuations &amp; Risk Management chapters)</a></li></ul>
+      <a class="test-link" href="skills-mock.html#fm-topic5">Take Topic 5 Practice Test</a></div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+const ACCA_USERS = {
+  'shallu': {password:'shallu2026', name:'Dr. Shallu', role:'faculty', title:'Faculty In-Charge'},
+  'kanupriya': {password:'kanupriya2026', name:'Kanupriya', role:'faculty', title:'Subject Faculty'},
+  'yachna': {password:'yachna2026', name:'Yachna', role:'faculty', title:'Subject Faculty'},
+  'manav': {password:'manav2026', name:'Manav', role:'student', title:'Student'},
+  'araarya': {password:'araarya2026', name:'Araarya', role:'student', title:'Student'},
+  'nyari': {password:'Nyari2026', name:'Nyari', role:'student', title:'Student (Applied Skills)'}
+};
+function renderAuthStatus(){
+  const el = document.getElementById('auth-status');
+  const uid = localStorage.getItem('acca_uid');
+  if(uid && ACCA_USERS[uid]){
+    const u = ACCA_USERS[uid];
+    el.innerHTML = 'Logged in: <b>'+u.name+'</b> ('+u.title+') &middot; <a href="#" onclick="accaLogout();return false;">Logout</a>';
+  } else {
+    el.innerHTML = '<a href="login.html">Login</a>';
+  }
+}
+function accaLogout(){
+  localStorage.removeItem('acca_uid');
+  window.location.href = 'login.html';
+}
+window.onload = function(){ showPaper('lw'); renderAuthStatus(); };
+</script>
+</body>
+</html>

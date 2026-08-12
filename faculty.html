@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Faculty Dashboard — ACCA LMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{--navy:#0f2544;--blue:#1c5cae;--gold:#d6a44a;--green:#1f8a5f;--purple:#6b3fa0;--orange:#c9701e;--bg:#f4f6fa;--red:#c0392b;}
+  *{box-sizing:border-box;}
+  body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:var(--bg);color:#1a2233;}
+  header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:30px 24px;}
+  header h1{margin:0 0 6px;font-size:1.6rem;}
+  nav{background:#fff;border-bottom:1px solid #dfe3ea;display:flex;gap:4px;padding:0 24px;flex-wrap:wrap;align-items:center;position:sticky;top:0;z-index:10;}
+  nav a{padding:14px 16px;text-decoration:none;color:var(--navy);font-weight:600;font-size:.9rem;border-bottom:3px solid transparent;}
+  nav a.active{border-bottom:3px solid var(--gold);color:var(--blue);}
+  main{max-width:1080px;margin:0 auto;padding:28px 24px 60px;}
+  .card{background:#fff;border-radius:10px;padding:22px 24px;margin-bottom:22px;box-shadow:0 1px 4px rgba(15,37,68,.08);}
+  h2{color:var(--navy);border-left:5px solid var(--gold);padding-left:12px;font-size:1.3rem;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.88rem;}
+  th,td{border:1px solid #e2e6ee;padding:9px 10px;text-align:left;vertical-align:top;}
+  th{background:var(--navy);color:#fff;}
+  tr:nth-child(even){background:#f8f9fc;}
+  code{background:#eef1f7;padding:2px 6px;border-radius:4px;font-size:.85rem;}
+  #auth-status{font-size:.82rem;color:#5a6472;margin-left:auto;padding:14px 16px;}
+  #auth-status a{color:var(--blue);text-decoration:none;font-weight:600;}
+  .gate{background:#fff4e0;border:1px solid #e8c98a;border-radius:8px;padding:14px 18px;font-size:.88rem;margin-bottom:18px;}
+  .cred-warn{background:#fdecea;border:1px solid var(--red);border-radius:8px;padding:12px 16px;font-size:.85rem;color:#9c2b1f;margin-top:14px;}
+  .level-tag{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px;margin-left:6px;}
+  .lvl-know{background:#1c5cae;color:#fff;}
+  .lvl-skill{background:#6b3fa0;color:#fff;}
+</style>
+</head>
+<body>
+<header>
+  <h1>Faculty Dashboard</h1>
+  <p style="opacity:.9;margin:0;">Rubrics, answer bank oversight, exemption processing, and readiness sign-off for both Applied Knowledge and Applied Skills levels.</p>
+</header>
+<nav>
+  <a href="index.html">Home (Knowledge)</a>
+  <a href="calendar.html">Weekly Calendar</a>
+  <a href="papers.html">Papers &amp; Resources</a>
+  <a href="mock.html">Practice &amp; Mock Tests</a>
+  <a href="faculty.html" class="active">Faculty Dashboard</a>
+  <a href="users.html">My Dashboard</a>
+  <a href="resource-guide.html">Resource &amp; Exemption Guide</a>
+  <a href="skills-index.html">Applied Skills Home</a>
+  <span id="auth-status"></span>
+</nav>
+<main>
+
+  <div class="gate" id="access-note">Checking login status...</div>
+
+  <div class="card">
+    <h2>Faculty Team &amp; Login Credentials</h2>
+    <table>
+      <tr><th>Name</th><th>Role</th><th>Assigned Paper(s)</th><th>User ID</th><th>Password</th></tr>
+      <tr><td>Dr. Shallu</td><td>Faculty In-Charge (Overall Program)</td><td>FA <span class="level-tag lvl-know">Knowledge</span> + oversight &amp; final readiness sign-off across all papers/levels</td><td><code>shallu</code></td><td><code>shallu2026</code></td></tr>
+      <tr><td>Kanupriya</td><td>Subject Faculty</td><td>MA <span class="level-tag lvl-know">Knowledge</span></td><td><code>kanupriya</code></td><td><code>kanupriya2026</code></td></tr>
+      <tr><td>Yachna</td><td>Subject Faculty</td><td>BT <span class="level-tag lvl-know">Knowledge</span></td><td><code>yachna</code></td><td><code>yachna2026</code></td></tr>
+    </table>
+    <p style="font-size:.85rem;color:#5a6472;"><b>Update:</b> Dr. Shallu is now directly allocated to FA (Financial Accounting), in addition to her overall Faculty In-Charge role. Applied Skills papers (LW, PM, TX, FR, AA, FM) do not yet have dedicated subject faculty assigned — flag names to update this table.</p>
+    <div class="cred-warn">Note: this LMS uses simple client-side login (stored in the browser) for organizing access during the pilot — it is not bank-grade security. Do not reuse these passwords for any other sensitive account.</div>
+  </div>
+
+  <div class="card">
+    <h2>Student Roster &amp; Login Credentials</h2>
+    <table>
+      <tr><th>Name</th><th>Level / Track</th><th>User ID</th><th>Password</th></tr>
+      <tr><td>Manav</td><td><span class="level-tag lvl-know">Knowledge</span> BCom (Hons) enrolled — Track 1</td><td><code>manav</code></td><td><code>manav2026</code></td></tr>
+      <tr><td>Araarya</td><td><span class="level-tag lvl-know">Knowledge</span> BCom (Hons) enrolled — Track 1</td><td><code>araarya</code></td><td><code>araarya2026</code></td></tr>
+      <tr><td>Nyari</td><td><span class="level-tag lvl-skill">Applied Skills</span> BCom (Hons) completed — Track 2 (exempt from Knowledge level)</td><td><code>nyari</code></td><td><code>Nyari2026</code></td></tr>
+    </table>
+    <p style="font-size:.85rem;color:#5a6472;">Nyari has already completed BCom (Hons) and is working directly at Applied Skills level (no Knowledge-level access needed). Her login routes to the Applied Skills dashboard. To add more students, share Name + User ID + Password + Level/Track with Dr. Shallu.</p>
+  </div>
+
+  <div class="card">
+    <h2>Subject Faculty Assignment — Applied Knowledge</h2>
+    <table>
+      <tr><th>Paper</th><th>Subject Faculty</th><th>Weekly Contact Hours</th><th>Sign-off Authority</th></tr>
+      <tr><td>BT — Business &amp; Technology</td><td>Yachna</td><td>Min. 2 hrs/week</td><td>Yachna + Dr. Shallu final approval</td></tr>
+      <tr><td>MA — Management Accounting</td><td>Kanupriya</td><td>Min. 2 hrs/week</td><td>Kanupriya + Dr. Shallu final approval</td></tr>
+      <tr><td>FA — Financial Accounting</td><td><b>Dr. Shallu</b></td><td>Min. 2 hrs/week</td><td>Dr. Shallu (direct)</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Subject Faculty Assignment — Applied Skills (6 papers)</h2>
+    <table>
+      <tr><th>Paper</th><th>Subject Faculty</th><th>Status</th></tr>
+      <tr><td>LW — Corporate &amp; Business Law</td><td>To be assigned</td><td>Content live, faculty pending</td></tr>
+      <tr><td>PM — Performance Management</td><td>To be assigned</td><td>Content live, faculty pending</td></tr>
+      <tr><td>TX — Taxation</td><td>To be assigned</td><td>Content live, faculty pending</td></tr>
+      <tr><td>FR — Financial Reporting</td><td>To be assigned</td><td>Content live, faculty pending</td></tr>
+      <tr><td>AA — Audit &amp; Assurance</td><td>To be assigned</td><td>Content live, faculty pending</td></tr>
+      <tr><td>FM — Financial Management</td><td>To be assigned</td><td>Content live, faculty pending</td></tr>
+    </table>
+    <p style="font-size:.85rem;color:#5a6472;">All 6 Applied Skills papers now have lessons, resources and practice questions live on <a href="skills-papers.html">skills-papers.html</a>. Dr. Shallu to confirm faculty allocation once more staff join the ACCA program.</p>
+  </div>
+
+  <div class="card">
+    <h2>Question Bank Summary</h2>
+    <table>
+      <tr><th>Level</th><th>Paper</th><th>Topics</th><th>Questions in Bank</th></tr>
+      <tr><td rowspan="3">Knowledge</td><td>BT</td><td>5</td><td>50</td></tr>
+      <tr><td>MA</td><td>5</td><td>51</td></tr>
+      <tr><td>FA</td><td>5</td><td>57 (expanded from 36)</td></tr>
+      <tr><td rowspan="6">Applied Skills</td><td>LW</td><td>6</td><td>30</td></tr>
+      <tr><td>PM</td><td>6</td><td>30</td></tr>
+      <tr><td>TX</td><td>6</td><td>30</td></tr>
+      <tr><td>FR</td><td>5</td><td>25</td></tr>
+      <tr><td>AA</td><td>5</td><td>25</td></tr>
+      <tr><td>FM</td><td>5</td><td>25</td></tr>
+    </table>
+    <p style="font-size:.85rem;color:#5a6472;"><b>Total LMS bank: 323 questions</b> (158 Knowledge + 165 Applied Skills) across 48 topics and 9 papers. Every topic also now has a plain-language "Simple Lesson" with diagram tables, sourced primarily from OpenTuition and ACCA Global.</p>
+  </div>
+
+  <div class="card">
+    <h2>Exemption Processing Guide</h2>
+    <table>
+      <tr><th>Step</th><th>Action</th></tr>
+      <tr><td>1</td><td>Collect the student's prior qualification documents (BCom Hons transcript, any existing ACCA registration/exemption letters).</td></tr>
+      <tr><td>2</td><td>Direct student to the ACCA Global <a href="https://www.accaglobal.com/uk/en/help/exemptions-calculator.html" target="_blank">Exemptions Calculator</a> for an indicative entitlement.</td></tr>
+      <tr><td>3</td><td>Confirm final exemption award only comes from ACCA Global directly upon official registration.</td></tr>
+      <tr><td>4</td><td>Already-exempt students (e.g. Nyari) go directly to Applied Skills — no need to complete Knowledge-level modules.</td></tr>
+      <tr><td>5</td><td>Exempt students who want a refresher may still opt into the Knowledge track voluntarily.</td></tr>
+    </table>
+  </div>
+
+</main>
+
+<script>
+const ACCA_USERS = {
+  'shallu': {password:'shallu2026', name:'Dr. Shallu', role:'faculty', title:'Faculty In-Charge (FA + Overall)'},
+  'kanupriya': {password:'kanupriya2026', name:'Kanupriya', role:'faculty', title:'Subject Faculty (MA)'},
+  'yachna': {password:'yachna2026', name:'Yachna', role:'faculty', title:'Subject Faculty (BT)'},
+  'manav': {password:'manav2026', name:'Manav', role:'student', title:'Student'},
+  'araarya': {password:'araarya2026', name:'Araarya', role:'student', title:'Student'},
+  'nyari': {password:'Nyari2026', name:'Nyari', role:'student', title:'Student (Applied Skills)'}
+};
+function renderAuthStatus(){
+  const el = document.getElementById('auth-status');
+  const gate = document.getElementById('access-note');
+  const uid = localStorage.getItem('acca_uid');
+  if(uid && ACCA_USERS[uid]){
+    const u = ACCA_USERS[uid];
+    el.innerHTML = 'Logged in: <b>'+u.name+'</b> ('+u.title+') &middot; <a href="#" onclick="accaLogout();return false;">Logout</a>';
+    if(u.role === 'faculty'){
+      gate.innerHTML = 'Welcome, <b>'+u.name+'</b>. You have full faculty dashboard access.';
+      gate.style.background = '#e5f6ec'; gate.style.borderColor = '#1f8a5f';
+    } else {
+      gate.innerHTML = 'You are logged in as a student. This page is intended for faculty — content below is for reference only.';
+    }
+  } else {
+    el.innerHTML = '<a href="login.html">Login</a>';
+    gate.innerHTML = 'You are not logged in. <a href="login.html">Login here</a> to access your personalised faculty view (browsing without login is still allowed).';
+  }
+}
+function accaLogout(){
+  localStorage.removeItem('acca_uid');
+  window.location.href = 'login.html';
+}
+window.onload = renderAuthStatus;
+</script>
+</body>
+</html>

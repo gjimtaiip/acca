@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Dashboard — ACCA Applied Skills LMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{--navy:#0f2544;--blue:#1c5cae;--gold:#d6a44a;--bg:#f4f6fa;}
+  *{box-sizing:border-box;}
+  body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:var(--bg);color:#1a2233;}
+  header{background:linear-gradient(135deg,var(--navy),#6b3fa0);color:#fff;padding:30px 24px;}
+  header h1{margin:0 0 6px;font-size:1.6rem;}
+  nav{background:#fff;border-bottom:1px solid #dfe3ea;display:flex;gap:4px;padding:0 24px;flex-wrap:wrap;align-items:center;position:sticky;top:0;z-index:10;}
+  nav a{padding:14px 16px;text-decoration:none;color:var(--navy);font-weight:600;font-size:.88rem;border-bottom:3px solid transparent;}
+  nav a.active{border-bottom:3px solid var(--gold);color:var(--blue);}
+  main{max-width:1080px;margin:0 auto;padding:28px 24px 60px;}
+  .card{background:#fff;border-radius:10px;padding:22px 24px;margin-bottom:22px;box-shadow:0 1px 4px rgba(15,37,68,.08);}
+  h2{color:var(--navy);border-left:5px solid var(--gold);padding-left:12px;font-size:1.3rem;}
+  .progress-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:14px;}
+  .prog-card{border-radius:8px;padding:14px 16px;color:#fff;}
+  .p-lw{background:linear-gradient(135deg,#6b3fa0,#4a2b70);}
+  .p-pm{background:linear-gradient(135deg,#1f8a5f,#125f42);}
+  .p-tx{background:linear-gradient(135deg,#c9701e,#8a4f14);}
+  .p-fr{background:linear-gradient(135deg,#1c5cae,#123a6e);}
+  .p-aa{background:linear-gradient(135deg,#0e7c86,#0a5860);}
+  .p-fm{background:linear-gradient(135deg,#b0334d,#7a2237);}
+  .prog-card h4{margin:0 0 4px;font-size:.95rem;}
+  .bar-bg{background:rgba(255,255,255,.3);border-radius:20px;height:8px;margin:6px 0;overflow:hidden;}
+  .bar-fill{background:#fff;height:100%;width:0%;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.88rem;}
+  th,td{border:1px solid #e2e6ee;padding:9px 10px;text-align:left;}
+  th{background:var(--navy);color:#fff;}
+  .status-not{color:#c0392b;font-weight:700;}
+  .exempt-box{background:#fff4e0;border:1px solid #e8c98a;border-radius:8px;padding:14px 18px;margin-top:14px;}
+  #auth-status{font-size:.82rem;color:#5a6472;margin-left:auto;padding:14px 16px;}
+  #auth-status a{color:var(--blue);text-decoration:none;font-weight:600;}
+  .welcome-banner{background:#eef4fb;border:1px solid #bcd4ef;border-radius:8px;padding:14px 18px;margin-bottom:18px;font-size:.92rem;}
+</style>
+</head>
+<body>
+<header>
+  <h1>My Dashboard — ACCA Applied Skills Level</h1>
+  <p style="opacity:.9;margin:0;">Your User ID and password were shared by faculty. Contact <b>Dr. Shallu</b> if you cannot log in.</p>
+</header>
+<nav>
+  <a href="skills-index.html">Home</a>
+  <a href="skills-papers.html">Papers &amp; Resources</a>
+  <a href="skills-mock.html">Practice &amp; Mock Tests</a>
+  <a href="skills-users.html" class="active">My Dashboard</a>
+  <a href="faculty.html">Faculty Dashboard</a>
+  <a href="index.html">Knowledge Level Home</a>
+  <span id="auth-status"></span>
+</nav>
+<main>
+
+  <div class="welcome-banner" id="welcome-msg">Loading your dashboard...</div>
+
+  <div class="card">
+    <h2>My Progress by Paper</h2>
+    <p>Progress is self-tracked as you complete Topic Practice Tests and Weekly Mocks.</p>
+    <div class="progress-grid">
+      <div class="prog-card p-lw"><h4>LW</h4><div class="bar-bg"><div class="bar-fill" style="width:0%;"></div></div><p style="margin:2px 0;font-size:.78rem;">0/6 topics</p></div>
+      <div class="prog-card p-pm"><h4>PM</h4><div class="bar-bg"><div class="bar-fill" style="width:0%;"></div></div><p style="margin:2px 0;font-size:.78rem;">0/6 topics</p></div>
+      <div class="prog-card p-tx"><h4>TX</h4><div class="bar-bg"><div class="bar-fill" style="width:0%;"></div></div><p style="margin:2px 0;font-size:.78rem;">0/6 topics</p></div>
+      <div class="prog-card p-fr"><h4>FR</h4><div class="bar-bg"><div class="bar-fill" style="width:0%;"></div></div><p style="margin:2px 0;font-size:.78rem;">0/5 topics</p></div>
+      <div class="prog-card p-aa"><h4>AA</h4><div class="bar-bg"><div class="bar-fill" style="width:0%;"></div></div><p style="margin:2px 0;font-size:.78rem;">0/5 topics</p></div>
+      <div class="prog-card p-fm"><h4>FM</h4><div class="bar-bg"><div class="bar-fill" style="width:0%;"></div></div><p style="margin:2px 0;font-size:.78rem;">0/5 topics</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>My Exemption Status</h2>
+    <table>
+      <tr><th>Item</th><th>Detail</th></tr>
+      <tr><td>Prior Qualification</td><td>BCom (Hons) — completed</td></tr>
+      <tr><td>Knowledge Level (BT/MA/FA)</td><td>Exempt — confirmed via ACCA exemption route</td></tr>
+      <tr><td>Current Level</td><td>Applied Skills — LW, PM, TX, FR, AA, FM</td></tr>
+      <tr><td>Study Mode</td><td>Parallel, self-paced, min. 2-3 hrs/week per paper</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Class Roster (Applied Skills)</h2>
+    <table>
+      <tr><th>Student</th><th>User ID</th><th>Status</th></tr>
+      <tr><td>Nyari</td><td><code>nyari</code></td><td class="status-not">Upcoming</td></tr>
+    </table>
+    <p style="font-size:.85rem;color:#5a6472;">More students with confirmed exemptions can be added by Dr. Shallu to this Applied Skills roster.</p>
+  </div>
+
+  <div class="exempt-box">
+    <h4>Want a refresher on Knowledge-level topics?</h4>
+    <p>Even though you're exempt, you can still browse <a href="papers.html">Knowledge Level Papers &amp; Resources</a> as a voluntary refresher before diving into Applied Skills content.</p>
+  </div>
+
+</main>
+
+<script>
+const ACCA_USERS = {
+  'shallu': {password:'shallu2026', name:'Dr. Shallu', role:'faculty', title:'Faculty In-Charge'},
+  'kanupriya': {password:'kanupriya2026', name:'Kanupriya', role:'faculty', title:'Subject Faculty'},
+  'yachna': {password:'yachna2026', name:'Yachna', role:'faculty', title:'Subject Faculty'},
+  'manav': {password:'manav2026', name:'Manav', role:'student', title:'Student'},
+  'araarya': {password:'araarya2026', name:'Araarya', role:'student', title:'Student'},
+  'nyari': {password:'Nyari2026', name:'Nyari', role:'student', title:'Student (Applied Skills)'}
+};
+function renderAuthStatus(){
+  const el = document.getElementById('auth-status');
+  const welcome = document.getElementById('welcome-msg');
+  const uid = localStorage.getItem('acca_uid');
+  if(uid && ACCA_USERS[uid]){
+    const u = ACCA_USERS[uid];
+    el.innerHTML = 'Logged in: <b>'+u.name+'</b> ('+u.title+') &middot; <a href="#" onclick="accaLogout();return false;">Logout</a>';
+    welcome.innerHTML = 'Welcome back, <b>'+u.name+'</b>! Your progress across all 6 Applied Skills papers is shown below.';
+  } else {
+    el.innerHTML = '<a href="login.html">Login</a>';
+    welcome.innerHTML = 'You are not logged in. <a href="login.html">Login here</a> to see your personalised dashboard.';
+  }
+}
+function accaLogout(){
+  localStorage.removeItem('acca_uid');
+  window.location.href = 'login.html';
+}
+window.onload = renderAuthStatus;
+</script>
+</body>
+</html>
