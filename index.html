@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GJIMT ACCA Prep LMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{--navy:#0f2544;--blue:#1c5cae;--gold:#d6a44a;--purple:#6b3fa0;--bg:#f4f6fa;--red:#c0392b;}
+  *{box-sizing:border-box;}
+  body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:var(--bg);color:#1a2233;}
+  #login-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--navy),var(--blue) 55%,var(--purple));padding:20px;}
+  .login-box{background:#fff;border-radius:14px;padding:40px 44px;width:420px;max-width:92vw;box-shadow:0 10px 34px rgba(0,0,0,.28);}
+  .login-box h1{color:var(--navy);font-size:1.5rem;margin:0 0 4px;text-align:center;}
+  .login-box .sub{color:#5a6472;font-size:.86rem;text-align:center;margin:0 0 24px;}
+  .login-box label{display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:6px;}
+  .login-box input{width:100%;padding:11px 13px;border:1px solid #cfd6e4;border-radius:7px;margin-bottom:16px;font-size:.95rem;}
+  .login-box button{width:100%;background:var(--gold);border:none;color:#1a2233;font-weight:700;padding:13px;border-radius:7px;cursor:pointer;font-size:.98rem;}
+  .login-box button:hover{opacity:.92;}
+  .error-msg{color:var(--red);font-size:.85rem;text-align:center;margin-bottom:12px;display:none;background:#fdecea;border:1px solid var(--red);border-radius:6px;padding:8px;}
+  .guest-link{display:block;text-align:center;margin-top:18px;font-size:.85rem;color:var(--blue);text-decoration:none;cursor:pointer;}
+  .note{background:#eef4fb;border:1px solid #bcd4ef;border-radius:8px;padding:11px 14px;font-size:.78rem;color:#3a5a80;margin-top:18px;line-height:1.5;}
+  .show-pwd{font-size:.78rem;color:var(--blue);cursor:pointer;display:inline-block;margin:-12px 0 16px;}
+  #redirect-screen{min-height:100vh;display:none;align-items:center;justify-content:center;background:var(--bg);}
+  .redirect-box{background:#fff;border-radius:14px;padding:40px 48px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.1);max-width:420px;}
+  .redirect-box h2{color:var(--navy);margin:0 0 8px;}.redirect-box p{color:#5a6472;font-size:.92rem;}
+  .spinner{width:34px;height:34px;border:4px solid #e2e6ee;border-top-color:var(--gold);border-radius:50%;margin:16px auto;animation:spin .8s linear infinite;}@keyframes spin{to{transform:rotate(360deg);}}
+  #guest-hub{display:none;max-width:1080px;margin:0 auto;padding:28px 24px 60px;}
+  header.hub-header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:36px 24px;}
+  header.hub-header h1{margin:0 0 8px;font-size:1.8rem;}header.hub-header p{margin:0;opacity:.9;max-width:800px;}
+  .card{background:#fff;border-radius:10px;padding:22px 24px;margin-bottom:22px;box-shadow:0 1px 4px rgba(15,37,68,.08);}
+  h2.card-h{color:var(--navy);border-left:5px solid var(--gold);padding-left:12px;font-size:1.3rem;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem;}th,td{border:1px solid #e2e6ee;padding:10px 12px;text-align:left;}th{background:var(--navy);color:#fff;}tr:nth-child(even){background:#f8f9fc;}
+  .level-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:16px;}.level-card{border-radius:10px;padding:20px;color:#fff;position:relative;overflow:hidden;}.level-open{background:linear-gradient(135deg,var(--blue),#123a6e);}.level-open2{background:linear-gradient(135deg,var(--purple),#4a2b70);}.level-locked{background:linear-gradient(135deg,#7d8798,#54606f);}.level-card h3{margin-top:0;}.badge{display:inline-block;background:rgba(255,255,255,.22);padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:700;margin-bottom:8px;}.lock-icon{font-size:1.4rem;position:absolute;top:16px;right:18px;opacity:.7;}.cta{display:inline-block;margin-top:10px;background:var(--gold);color:#1a2233;padding:9px 16px;border-radius:6px;font-weight:700;text-decoration:none;font-size:.88rem;}.back-to-login{display:inline-block;margin-bottom:14px;color:var(--blue);text-decoration:none;font-size:.88rem;font-weight:600;}footer{text-align:center;padding:20px;color:#8a94a3;font-size:.85rem;}
+</style>
+</head>
+<body>
+<div id="login-screen"><div class="login-box">
+  <h1>GJIMT ACCA Prep LMS</h1><p class="sub">Applied Knowledge &amp; Applied Skills Levels — sign in to continue</p>
+  <div class="error-msg" id="err">Incorrect User ID or Password. Please try again.</div>
+  <label for="uid">User ID</label><input type="text" id="uid" placeholder="e.g. shallu / kanupriya / manav / hriday" autocomplete="off">
+  <label for="pwd">Password</label><input type="password" id="pwd" placeholder="Enter your password" autocomplete="off">
+  <span class="show-pwd" onclick="togglePwd()">👁 Show password</span><button onclick="doLogin()">Login</button>
+  <a class="guest-link" onclick="showGuestHub()">Continue browsing without logging in →</a>
+  <div class="note">Faculty: Dr. Shallu (Overall + FA), Kanupriya (BT), Yachna (MA). Students: Manav, Araarya, Hriday, Sukhmanpreet and Eva (Knowledge Level); Nyari (Applied Skills). Contact Dr. Shallu for credentials.</div>
+</div></div>
+<div id="redirect-screen"><div class="redirect-box"><h2 id="redirect-title">Welcome back!</h2><div class="spinner"></div><p id="redirect-text">Taking you to your dashboard...</p></div></div>
+<div id="guest-hub">
+  <header class="hub-header" style="margin:-24px -24px 24px -24px;"><a class="back-to-login" href="#" onclick="showLoginScreen();return false;" style="color:#fff;">← Back to Login</a><h1>🎓 GJIMT ACCA Preparation LMS</h1><p>Browsing without login. Faculty In-Charge: <b>Dr. Shallu</b>.</p></header>
+  <div class="card"><h2 class="card-h">Program Overview</h2><table>
+    <tr><th>Item</th><th>Detail</th></tr><tr><td>Program</td><td>GJIMT ACCA Preparation — Applied Knowledge + Applied Skills</td></tr><tr><td>Knowledge Faculty</td><td>BT — Kanupriya · MA — Yachna · FA — Dr. Shallu</td></tr><tr><td>Knowledge Papers</td><td>BT — Business and Technology · MA — Management Accounting · FA — Financial Accounting</td></tr><tr><td>Applied Skills Papers</td><td>LW, PM, TX, FR, AA, FM</td></tr><tr><td>Structure per topic</td><td>Simple Lesson → Resources → Topic Practice Test → Weekly Mock → Full-Length CBE-Replica Mock</td></tr>
+  </table></div>
+  <div class="card"><h2 class="card-h">Choose a Level to Browse</h2><div class="level-grid">
+    <div class="level-card level-open"><span class="badge">ACTIVE NOW</span><h3>1️⃣ Applied Knowledge</h3><p>3 papers (BT, MA, FA) · on-demand CBE</p><a class="cta" href="papers.html">Browse Knowledge Level →</a></div>
+    <div class="level-card level-open2"><span class="badge">ACTIVE NOW</span><h3>2️⃣ Applied Skills</h3><p>6 papers (LW, PM, TX, FR, AA, FM)</p><a class="cta" href="skills-index.html">Browse Applied Skills →</a></div>
+    <div class="level-card level-locked"><span class="lock-icon">🔒</span><span class="badge">FUTURE PHASE</span><h3>3️⃣ Strategic Professional</h3><p>2 Essentials + 2 Options + Ethics &amp; Professional Skills module</p></div>
+  </div></div>
+  <div class="card"><h2 class="card-h">Guest Browsing</h2><p style="font-size:.9rem;color:#5a6472;">You can explore resources, lessons and take practice tests without logging in. Progress tracking and personalised dashboards require login. <a href="#" onclick="showLoginScreen();return false;">Login here</a>.</p></div>
+  <footer>GJIMT ACCA Prep LMS · Faculty In-Charge: Dr. Shallu</footer>
+</div>
+<script>
+const ACCA_USERS={
+  'shallu':{password:'shallu2026',name:'Dr. Shallu',role:'faculty',title:'Faculty In-Charge (FA + Overall)',redirect:'faculty.html'},
+  'kanupriya':{password:'kanupriya2026',name:'Kanupriya',role:'faculty',title:'Subject Faculty (BT)',redirect:'faculty.html'},
+  'yachna':{password:'yachna2026',name:'Yachna',role:'faculty',title:'Subject Faculty (MA)',redirect:'faculty.html'},
+  'manav':{password:'manav2026',name:'Manav',role:'student',title:'Student (Knowledge Level)',redirect:'users.html'},
+  'araarya':{password:'araarya2026',name:'Araarya',role:'student',title:'Student (Knowledge Level)',redirect:'users.html'},
+  'hriday':{password:'hriday2026',name:'Hriday',role:'student',title:'Student (Knowledge Level)',redirect:'users.html'},
+  'sukhmanpreet':{password:'sukhmanpreet2026',name:'Sukhmanpreet',role:'student',title:'Student (Knowledge Level)',redirect:'users.html'},
+  'eva':{password:'eva2026',name:'Eva',role:'student',title:'Student (Knowledge Level)',redirect:'users.html'},
+  'nyari':{password:'nyari2026',name:'Nyari',role:'student',title:'Student (Applied Skills)',redirect:'skills-users.html'}
+};
+function showScreen(id){['login-screen','redirect-screen','guest-hub'].forEach(function(s){document.getElementById(s).style.display='none';});document.getElementById(id).style.display=(id==='guest-hub')?'block':'flex';}
+function showLoginScreen(){document.getElementById('uid').value='';document.getElementById('pwd').value='';document.getElementById('err').style.display='none';showScreen('login-screen');}
+function showGuestHub(){showScreen('guest-hub');}
+function togglePwd(){const f=document.getElementById('pwd');f.type=(f.type==='password')?'text':'password';}
+function doLogin(){const uid=document.getElementById('uid').value.trim().toLowerCase();const pwd=document.getElementById('pwd').value.trim().toLowerCase();const user=ACCA_USERS[uid];if(user&&user.password.toLowerCase()===pwd){localStorage.setItem('acca_uid',uid);localStorage.setItem('acca_name',user.name);localStorage.setItem('acca_role',user.role);localStorage.setItem('acca_title',user.title);redirectToModule(user,false);}else{document.getElementById('err').style.display='block';}}
+function redirectToModule(user,isReturning){showScreen('redirect-screen');document.getElementById('redirect-title').textContent=(isReturning?'Welcome back, ':'Welcome, ')+user.name+'!';document.getElementById('redirect-text').textContent='Taking you to '+(user.role==='faculty'?'the Faculty Dashboard':'your Student Dashboard')+'...';setTimeout(function(){window.location.href=user.redirect;},900);}
+document.getElementById('pwd').addEventListener('keyup',function(e){if(e.key==='Enter')doLogin();});
+window.onload=function(){const uid=localStorage.getItem('acca_uid');if(uid&&ACCA_USERS[uid])redirectToModule(ACCA_USERS[uid],true);else showScreen('login-screen');};
+</script>
+</body>
+</html>
